@@ -5,14 +5,14 @@ In this project we generate two different html files that contain two maps:
 
 The project is organized in several folders
  
-Folder API contains two interesting modules:
+Folder API, contains two interesting modules:
 - DonutChartGenerator whose function graph_generator allows you to generate simple or double donut charts very easily and very customized  - MapGenerator whose function build_map allows you to build a map coloring regions according to certain values defined by yourself and including a legend and putGenericMarkers that allows you to set markers in the map and the HTML code you want to be displayed when we open a marker
 
 Folder Wrapper, contains Wrappers for the previously mentioned modules:
 - MarriageEqualityChartGeneratorWrapper: Contains functions that will be used in the function marriage_equality_graph_generator that will call the function graph_generator customizing its parameters and its results so it fits our problem. In this case, generate a graph that
 represents the voting in which marriage equality was legalized for each country.
 
-Folder Instantiators contains the modules we have to run to generate the maps that use the modules in API and also the modules in API:
+Folder Instantiators, contains the modules we have to run to generate the maps that use the modules in API and also the modules in API:
 - MarriageEqualityApprovalRate: When you run it, it will generate the file marriage_equality_approval_rate_worldwide.html
 - MarriageEqualityLegalized: When you run it, it will generate the file marriage_equality_legal_worldwide.html
 
