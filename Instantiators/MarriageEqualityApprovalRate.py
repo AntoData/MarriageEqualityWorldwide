@@ -38,7 +38,7 @@ pathHTML = os.getcwd()+"\..\marriage_equality_approval_rate_worldwide.html"
 #we define the caption for our legend in the map
 vCap = "Same-Sex Approval Rate"
 #we use the function we defined previously to generate the map
-vMap = mg.buildMap(mear_world, geo_world,dict_mear, colours, vCap,'name')
+vMap = mg.buildMap(mear_world, geo_world,dict_mear, colours, vCap,"",'name')
 #we read the csv with the data of countries where same-sex marriage is legal to a dataframe
 df_mel = pd.read_csv(os.getcwd()+"\..\data\MarriageEqualityLegalized.csv",sep="\t")
 #We use the function putMarkers to put markers in the capital cities of countries where

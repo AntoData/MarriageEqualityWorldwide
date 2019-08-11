@@ -26,7 +26,7 @@ is available)
 """
 
 #In this case, we set the following colours
-colours = {"Legal":"green","Illegal":"red"}
+colours = {"Legal":"#006600","Illegal":"#ff0000"}
 #We are talking our same sex marriage approval rate, countries where the approval rate is as low as
 #between 0 and 25 should be painted red as it is a very low approval rate, orange for approval rates
 #as low as between 25 and 50, yellow between 50 and 75, green for values between
@@ -46,8 +46,9 @@ dict_mel = df_mel.set_index('Country')['Status'].to_dict()
 pathHTML = os.getcwd()+"\..\\marriage_equality_legal_worldwide.html"
 #we define the caption for our legend in the map
 vCap = "Same-Sex Approval Rate"
+vCap2 = "Status"
 #we use the function we defined previously to generate the map
-vMap = mg.buildMap(mel_world, geo_world,dict_mel, colours, vCap,'name')
+vMap = mg.buildMap(mel_world, geo_world,dict_mel, colours, vCap,vCap2,'name')
 #we read the csv with the data of countries where same-sex marriage is legal to a dataframe
 #df_ssm = pd.read_csv(os.getcwd()+"\..\data\SSM.csv",sep="\t")
 #We use the function putMarkers to put markers in the capital cities of countries where

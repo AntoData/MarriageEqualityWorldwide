@@ -92,7 +92,7 @@ def get_color(feature,dataMap,colours,mapProperty):
         i=i+1
 
 
-def buildMap(vMap,jsondata,dataMap,colours,vCaption,mapProperty):
+def buildMap(vMap,jsondata,dataMap,colours,vCaption,vCaption2,mapProperty):
     """
     @param vMap: Folium map object we will use as the base to build the regions and paint them
     @param jsondata: Route to the json we will use to divide our map into regions and to paint them
@@ -103,7 +103,8 @@ def buildMap(vMap,jsondata,dataMap,colours,vCaption,mapProperty):
     values first in the map and them the number values that will be paired to make ranges.
     Also important to notice, the keys are the values and the values are the color a string
     with the hexadecimal color (#XXXXXX) or a valid color name
-    @param VCaption: Text we will put in the legend for our colours in the map
+    @param VCaption: Text we will put in the legend for the linear colours in the map
+    @param VCaption2: Text we will put in the legend for the static colours in the map
     @param mapProperty: Property in feature we will use to identify the zones defined in the
     json
     @return: the map divided in regions, with the regions painted and coloured according to the
@@ -148,11 +149,14 @@ def buildMap(vMap,jsondata,dataMap,colours,vCaption,mapProperty):
     if(not numValue):
         htmlLegend = """
         <div style='position: fixed;bottom:50px;left:50px;border:2px solid grey;z-index:9999; font-size:14px'>
-        &nbsp; Non-linear values 
-        """
+        &nbsp; """+vCaption2
         for key in nonlinearLegendKeys:
-            htmlLegend += "<br> &nbsp; "+key+" &nbsp; <i class='fa fa-map-marker fa-2x' style='color:"+colours[key]+"'></i>"
-        
+            htmlLegend += '<br> &nbsp; '+key+' &nbsp;' 
+            htmlLegend += '<svg width="40" height="11">'
+            color = colours[key].replace(' ',"")
+            rgbcolor = list(int(color[i:i+2], 16) for i in (1, 3, 5))
+            htmlLegend += '    <rect width="40" height="11" style="fill:rgb({0},{1},{2});stroke-width:3;stroke:rgb(0,0,0)" />'.format(rgbcolor[0],rgbcolor[1],rgbcolor[2])
+            htmlLegend += '</svg>'
         htmlLegend += """
         </div>
         """
