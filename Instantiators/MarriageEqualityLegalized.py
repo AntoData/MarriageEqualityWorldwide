@@ -3,6 +3,9 @@ Created on 21 jul. 2019
 
 @author: ingov
 '''
+"""
+Data source: Wikipedia
+"""
 #We get MapGenerator so we can use the function build_map and putGenericMarkers to build our map
 from API import MapGenerator as mg
 #We get MarriageEqualityChartGeneratorWrapper so we can get the function gettingHTML

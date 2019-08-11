@@ -3,6 +3,9 @@ Created on 21 jul. 2019
 
 @author: ingov
 '''
+"""
+Data source: Wikipedia
+"""
 from API import MapGenerator as mg
 import pandas as pd
 import os
