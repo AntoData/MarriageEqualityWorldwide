@@ -1,0 +1,2 @@
+# MarriageEqualityWorldwide
+ Project where we provide inside folder API two interesting modules: DonutChartGenerator whose function graph_generator allows you to generate simple or double donut charts very easily and very customized and module MapGenerator whose function build_map allows you to build a map coloring regions according to certain values defined by yourself and including a legend and putGenericMarkers that allows you to set markers in the map and the HTML code you want to be displayed when we open a marker

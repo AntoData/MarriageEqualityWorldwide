@@ -1,0 +1,27 @@
+Country	Year	Lat	Lon	Status	Voting	Date
+Netherlands	2001	52.370216	4.895168	Legal	Parliament	"12 September 2000 vote in the House of Representatives"
+Belgium	2003	50.85045	4.34878	Legal	Parliament	"30 January 2003 vote in the Chamber of Representatives"
+Spain	2005	40.4165	-3.70256	Legal	Parliament	"21 April 2005 vote in the Congress of Deputies"
+Canada	2005	45.41117	-75.69812	Legal	Parliament	"House of Commons Vote December 7 2006"
+"South Africa"	2006	-25.74486	28.18783	Legal	Parliament	"14 November 2006 vote in the National Assembly"
+Norway	2009	59.91273	10.74609	Legal	Secret	"11 June 2008 vote in the lower house"
+Sweden	2009	59.33258	18.0649	Legal	Parliament	"1 April 2009 vote in the Parliament"
+Portugal	2010	38.71667	-9.13333	Legal	Secret	"8 January 2010 vote in the Parliament"
+Iceland	2010	64.13548	-21.89541	Legal	Parliament	"11 June 2010 vote in the Althing"
+Argentina	2010	-34.61315	-58.37723	Legal	Secret	"5 May 2010 vote in the Chamber of Deputies"
+Denmark	2012	55.67594	12.56553	Legal	Parliament	"7 June 2012 vote in the Parliament"
+Brazil	2013	-15.77972	-47.92972	Legal	-	-
+France	2013	48.85341	2.3488	Legal	Secret	"Amended bill voting by the National Assembly on 23 April 2013"
+Uruguay	2013	-34.90328	-56.18816	Legal	Secret	"10 April 2013 amended bill vote in the Chamber of Representatives"
+"New Zealand"	2013	-41.28664	174.77557	Legal	Parliament	"17 April 2013 vote in the Parliament"
+"United Kingdom"	2014	51.51279	-0.09184	Legal	Parliament	"Second Reading on 5 February 2013"
+Luxembourg	2015	49.61167	6.13	Legal	Parliament	"18 June 2014 vote in the Chamber of Deputies"
+"United States"	2015	38.89511	-77.03637	Legal	-	-
+Ireland	2015	53.33306	-6.24889	Legal	Referendum	"Marriage Equality referendum held on 22 May 2015"
+Colombia	2016	4.60971	-74.08175	Legal	-	-
+Finland	2017	60.16952	24.93545	Legal	Parliament	"17 February 2017 vote in the Parliament"
+Malta	2017	35.89972	14.51472	Legal	Secret	"12 July 2017 vote in the Parliament"
+Germany	2017	52.52437	13.41053	Legal	Parliament	"30 June 2017 vote in the Bundestag"
+Australia	2017	-35.28346	149.12807	Legal	Referendum	"Australian Marriage Law Postal Survey between 12 September and 7 November 2017"
+Austria	2019	48.20849	16.37208	Legal	Parliament	"10 December 2009 vote in the National Council"
+Taiwan	2019	25.04776	121.53185	Legal	-	-
