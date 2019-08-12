@@ -26,7 +26,7 @@ is available)
 """
 
 #In this case, we set the following colours
-colours = {"Legal":"#006600","Illegal":"#ff0000"}
+colours = {"Legal":"#006600"}
 #We are talking our same sex marriage approval rate, countries where the approval rate is as low as
 #between 0 and 25 should be painted red as it is a very low approval rate, orange for approval rates
 #as low as between 25 and 50, yellow between 50 and 75, green for values between

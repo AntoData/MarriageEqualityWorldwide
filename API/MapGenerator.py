@@ -66,30 +66,43 @@ def get_color(feature,dataMap,colours,mapProperty):
     #represented by mapProperty
     print(feature['properties'][mapProperty])
     value = dataMap.get(feature['properties'][mapProperty])
-    i=1
-    #We iterate through the values that define the ranges of colours that we got from
-    #our dictionary of colors (key:value, value:colour)
-    while(i<len(coloursKey) and value is not None):
-        #If the value is not null, in other words, if that region is in our data frame
-        #we proceed to get the colour we have to paint that region with
-        if(value is not None):
-            #We check if our value is between a certain range, as we are iterating
-            #we will check all ranges
-            if not isinstance(value,(int,float)):
-                if coloursKey[i-1] == value:
-                    return colours.get(coloursKey[i-1])
-                
-            if isinstance(coloursKey[i-1],(int,float)) and isinstance(coloursKey[i],(int,float)):
-                lowerValue = float(coloursKey[i-1])
-                upperValue = float(coloursKey[i])
-                numValue = float(value)
-                if lowerValue <= numValue <= upperValue:
-                    return color_scale(colours.get(lowerValue),colours.get(upperValue),numValue,lowerValue,upperValue)
+    try:
+        number = int(value)
+        value = number
+    except Exception:
+        try:
+            number = float(value)
+            value = number
+        except Exception:
+            pass
+    #If value is not None, it means it is in our dataMap so we have to color that area    
+    if(value is not None):
+        #If value is not int or float, it means is a static value
+        if not isinstance(value,(int,float)):
+            i=0
+            #We iterate through the different values that are associated with colors
+            while(i<len(coloursKey) and value is not None):
+                #If our value is equal to the value associated with a certain color, we return
+                #that color
+                if coloursKey[i] == value:
+                    return colours.get(coloursKey[i])
+                i = i + 1
+        else:
+            #We iterate through the values that define the ranges of colours that we got from
+            #our dictionary of colors (key:value, value:colour)
+            i = 1
+            while(i<len(coloursKey) and value is not None):
                 #if our current value is in that range, we use the function color_scale
                 #that we defined previously to get the corresponding shade of the colour
                 #for that value
+                if isinstance(coloursKey[i-1],(int,float)) and isinstance(coloursKey[i],(int,float)):
+                    lowerValue = float(coloursKey[i-1])
+                    upperValue = float(coloursKey[i])
+                    numValue = float(value)
+                    if lowerValue <= numValue <= upperValue:
+                        return color_scale(colours.get(lowerValue),colours.get(upperValue),numValue,lowerValue,upperValue)
+                i=i+1
                 
-        i=i+1
 
 
 def buildMap(vMap,jsondata,dataMap,colours,vCaption,vCaption2,mapProperty):
